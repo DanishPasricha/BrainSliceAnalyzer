@@ -66,22 +66,6 @@ output/
 
 ---
 
-## 🧬 Processing Workflow
-
-```mermaid
-flowchart TD
-    A[🖼️ Load MRI Image] --> B[⚫ Convert to Grayscale]
-    B --> C[🧠 Template Matching (≥ 0.8)]
-    C --> D[✂️ Crop Region [y-90:y, x:x+115]]
-    D --> E[🧹 Erosion + Pixel Check]
-    E --> F[💾 Save to /slices]
-    D --> G[🎯 Gaussian Blur]
-    G --> H[🔍 Detect Contours]
-    H --> I[💾 Save to /contours]
-```
-
----
-
 ## 🛠️ Customization Tips
 
 | 🔄 What to Change    | 💬 How                                                            |
